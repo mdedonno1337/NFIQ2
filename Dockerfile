@@ -41,6 +41,8 @@ COPY --from=builder /tmp/NFIQ2/biomdi/common/lib/        /NFIQ2/biomdi/common/li
 COPY --from=builder /tmp/NFIQ2/biomdi/fingerminutia/lib/ /NFIQ2/biomdi/fingerminutia/lib/
 COPY --from=builder /tmp/NFIQ2/libOpenCV/lib/            /NFIQ2/libOpenCV/lib/
 
+COPY --from=builder /tmp/NFIQ2/complianceTestSet		 /NFIQ2/complianceTestSet
+
 ENV LD_LIBRARY_PATH=/NFIQ2/libOpenCV/lib:/NFIQ2/biomdi/common/lib:/NFIQ2/biomdi/fingerminutia/lib:/NFIQ2/NFIQ2/lib/
 
 RUN ln -s /NFIQ2/NFIQ2/bin/NFIQ2 /usr/bin/NFIQ2
